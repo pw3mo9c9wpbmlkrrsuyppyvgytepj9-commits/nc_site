@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaCore | Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard-app.css">
+</head>
+<body class="dash-body">
+  <div class="dash-shell">
+    <div class="panel login-card">
+      <a href="/" class="dash-brand" style="justify-content:center;margin-bottom:1rem;">
+        <img src="/assets/images/logo.png" alt="">
+        <span>NexaCore</span>
+      </a>
+      <h1>Control panel</h1>
+      <p class="dash-muted">Sign in with Discord to continue.</p>
+      <p class="dash-muted" style="font-size:0.8rem;">This area is not linked from the public site.</p>
+      <div style="margin-top:1.5rem;">
+        <a class="btn btn-primary" href="/dashboard/auth/discord">Login with Discord</a>
+      </div>
+      <p style="margin-top:1.5rem;">
+        <a class="btn btn-ghost" href="/">Back to site</a>
+      </p>
+    </div>
+  </div>
+  <script>
+    (function () {
+      fetch("/dashboard/api/me", { credentials: "same-origin" })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.ok) {
+            window.location.replace("/dashboard/app.html");
+          }
+        })
+        .catch(function () {});
+    })();
+  </script>
+</body>
+</html>

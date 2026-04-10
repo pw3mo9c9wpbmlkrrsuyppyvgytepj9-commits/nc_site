@@ -1,0 +1,4 @@
+node_modules/
+# OAuth / local data
+server/.env
+server/data/modules.json

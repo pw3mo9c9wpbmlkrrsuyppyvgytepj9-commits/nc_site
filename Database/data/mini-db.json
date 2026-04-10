@@ -1,0 +1,19 @@
+{
+  "collections": {
+    "Testing": [
+      {
+        "id": "e308e1ff-0879-4bc9-a56c-410ea9f15c40",
+        "createdAt": "2026-04-10T10:46:11.493Z",
+        "updatedAt": "2026-04-10T10:46:11.493Z",
+        "data": {
+          "name": "Alice",
+          "role": "admin"
+        }
+      }
+    ]
+  },
+  "meta": {
+    "createdAt": "2026-04-10T10:45:12.495Z",
+    "updatedAt": "2026-04-10T10:46:11.493Z"
+  }
+}

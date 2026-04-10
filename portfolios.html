@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaCore | Portfolios</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="/index.html" class="brand-link">
+            <img src="/assets/images/logo.png" alt="" class="logo" width="40" height="40">
+            <span class="brand">Nexa<span class="accent">Core</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/order.html">Order</a></li>
+                <li><a href="/portfolios.html" class="is-active" aria-current="page">Portfolios</a></li>
+                <li><a href="/support.html">Support</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="/login.html" class="header-account" aria-label="Account and sign in">
+                <svg class="header-account__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.75"/>
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="shell">
+                <div class="hero__inner hero__inner--compact">
+                    <span class="hero__badge">Work</span>
+                    <h1 class="hero__title hero__title--page">Portfolios &amp; case studies</h1>
+                    <p class="hero__desc hero__desc--narrow">A snapshot of recent deliveries — from commerce flows to automation and dashboard UX.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="shell">
+                <div class="grid-3">
+                    <article class="card card--center">
+                        <div class="card__icon">◈</div>
+                        <h3>Commerce web app</h3>
+                        <p>Modern storefront and checkout experience with performance-focused frontend architecture.</p>
+                    </article>
+                    <article class="card card--center">
+                        <div class="card__icon">◈</div>
+                        <h3>Discord automation</h3>
+                        <p>Custom bot flows, moderation, and community tooling for large servers.</p>
+                    </article>
+                    <article class="card card--center">
+                        <div class="card__icon">◈</div>
+                        <h3>SaaS dashboard UX</h3>
+                        <p>Information architecture and UI refresh for a metrics-heavy product surface.</p>
+                    </article>
+                </div>
+                <p class="text-center-muted">Want something similar? <a href="/order.html">Open an order</a> or <a href="/support.html">talk to us</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <div class="footer-brand">
+                <a href="/index.html" class="brand-link">
+                    <img src="/assets/images/logo.png" alt="" class="logo" width="36" height="36">
+                    <span class="brand">Nexa<span class="accent">Core</span></span>
+                </a>
+                <p>Case studies are representative; exact stacks vary per client.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Build</h4>
+                <ul>
+                    <li><a href="/order.html">Order</a></li>
+                    <li><a href="/products.html">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/support.html">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="shell footer-bottom">
+            <p>&copy; 2026 NexaCore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cookie-consent" class="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+        <div class="cookie-banner__inner">
+            <p>We use a small browser preference to remember your cookie choice. Allow cookies for this site?</p>
+            <div class="cookie-banner__actions">
+                <button type="button" class="btn btn--primary" id="cookie-accept">Allow cookies</button>
+                <button type="button" class="btn btn--ghost" id="cookie-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

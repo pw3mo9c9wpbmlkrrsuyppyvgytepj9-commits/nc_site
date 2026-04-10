@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaCore | Bot dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard-app.css">
+</head>
+<body class="dash-body">
+  <div class="dash-shell">
+    <header class="dash-top">
+      <a href="/dashboard/" class="dash-brand">
+        <img src="/assets/images/logo.png" alt="">
+        <span>NexaCore · Dashboard</span>
+      </a>
+      <div class="dash-actions">
+        <button type="button" class="btn btn-ghost" id="btnLogout">Log out</button>
+        <a class="btn btn-ghost" href="/">Main site</a>
+      </div>
+    </header>
+
+    <div id="flashMount"></div>
+
+    <section class="panel" style="margin-bottom:1rem;">
+      <h2>Bot &amp; server</h2>
+      <p class="dash-muted" id="botSummary">Loading…</p>
+      <div class="stat-row" id="guildStats" style="margin-top:0.75rem;"></div>
+    </section>
+
+    <div class="dash-grid cols-2">
+      <section class="panel">
+        <h2>Bot modules (saved on server)</h2>
+        <p class="dash-muted" style="margin-bottom:0.75rem;">Toggle feature flags stored in <code>server/data/modules.json</code>.</p>
+        <div class="toggle-list" id="moduleToggles"></div>
+        <button type="button" class="btn btn-primary" id="btnSaveModules" style="margin-top:0.75rem;">Save modules</button>
+      </section>
+
+      <section class="panel">
+        <h2>Send as bot</h2>
+        <div class="dash-row">
+          <label class="dash-label" for="selGuild">Server</label>
+          <select class="dash-select" id="selGuild"></select>
+        </div>
+        <div class="dash-row">
+          <label class="dash-label" for="selChannel">Channel</label>
+          <select class="dash-select" id="selChannel"></select>
+        </div>
+        <div class="dash-row">
+          <label class="dash-label" for="msgContent">Message content (optional if embed)</label>
+          <textarea class="dash-textarea" id="msgContent" placeholder="Plain text message…"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" id="btnSendPlain">Send message</button>
+      </section>
+    </div>
+
+    <section class="panel" style="margin-top:1rem;">
+      <h2>Embed builder → send via bot</h2>
+      <p class="dash-muted">Uses the same channel as above. Color is hex (e.g. #7b2ff2).</p>
+      <div class="dash-grid cols-2" style="margin-top:0.75rem;">
+        <div>
+          <div class="dash-row">
+            <label class="dash-label" for="embTitle">Title</label>
+            <input class="dash-input" id="embTitle" type="text" placeholder="Embed title">
+          </div>
+          <div class="dash-row">
+            <label class="dash-label" for="embDesc">Description</label>
+            <textarea class="dash-textarea" id="embDesc" placeholder="Main body text"></textarea>
+          </div>
+          <div class="dash-row">
+            <label class="dash-label" for="embColor">Color (#RRGGBB)</label>
+            <input class="dash-input" id="embColor" type="text" value="#7b2ff2" maxlength="7">
+          </div>
+          <div class="dash-row">
+            <label class="dash-label" for="embFooter">Footer</label>
+            <input class="dash-input" id="embFooter" type="text" placeholder="Footer text">
+          </div>
+          <div class="dash-row">
+            <label class="dash-label" for="embThumb">Thumbnail URL (optional)</label>
+            <input class="dash-input" id="embThumb" type="url" placeholder="https://…">
+          </div>
+        </div>
+        <div>
+          <span class="dash-label">Preview</span>
+          <div class="embed-preview" id="embPreview">
+            <div class="t" id="pvTitle">Title</div>
+            <div class="d" id="pvDesc">Description</div>
+            <div class="d" id="pvFooter" style="margin-top:0.5rem;font-size:0.8rem;"></div>
+          </div>
+          <div class="dash-row" style="margin-top:1rem;">
+            <label class="dash-label">Inline fields (optional)</label>
+            <div id="embFields"></div>
+            <button type="button" class="btn btn-ghost" id="btnAddField" style="margin-top:0.5rem;">+ Add field</button>
+          </div>
+        </div>
+      </div>
+      <div class="dash-row">
+        <label class="dash-label" for="embExtraContent">Extra message text (optional, outside embed)</label>
+        <textarea class="dash-textarea" id="embExtraContent" placeholder="Optional text above the embed"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" id="btnSendEmbed">Send embed</button>
+    </section>
+  </div>
+  <script src="/dashboard/dashboard.js"></script>
+</body>
+</html>

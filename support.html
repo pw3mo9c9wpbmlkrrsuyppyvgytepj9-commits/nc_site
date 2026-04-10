@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaCore | Support</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="page-form">
+    <header class="site-header">
+        <a href="/index.html" class="brand-link">
+            <img src="/assets/images/logo.png" alt="" class="logo" width="40" height="40">
+            <span class="brand">Nexa<span class="accent">Core</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/order.html">Order</a></li>
+                <li><a href="/portfolios.html">Portfolios</a></li>
+                <li><a href="/support.html" class="is-active" aria-current="page">Support</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="/login.html" class="header-account" aria-label="Account and sign in">
+                <svg class="header-account__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.75"/>
+                    <path d="M4 20a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="shell">
+                <div class="section__head section__head--tight">
+                    <span class="section__eyebrow">Help desk</span>
+                    <h1 class="section__title hero__title--page">Support center</h1>
+                    <p class="section__lead">Onboarding, troubleshooting, and technical questions — send a ticket-style message and we’ll get back to you.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="shell">
+            <div class="form-shell">
+                <aside class="form-aside">
+                    <h2>Response time</h2>
+                    <p>We aim to acknowledge requests within one business day. Include reproduction steps for bugs and the environment (browser, server, bot version) when relevant.</p>
+                    <ul>
+                        <li>For urgent production issues, say “urgent” in the subject</li>
+                        <li>Attach logs or screenshots if you can</li>
+                    </ul>
+                </aside>
+                <div class="form-panel">
+                    <h2 class="form-panel__title">Contact support</h2>
+                    <p class="form-panel__sub">All fields help us route your request to the right person.</p>
+                    <form class="contact-form" id="support-form">
+                        <div class="field">
+                            <label for="sup-name">Your name</label>
+                            <input class="input" id="sup-name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="sup-email">Email</label>
+                            <input class="input" id="sup-email" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="sup-subject">Subject</label>
+                            <input class="input" id="sup-subject" name="subject" type="text" placeholder="Short summary of the issue" required>
+                        </div>
+                        <div class="field">
+                            <label for="sup-body">Describe the issue</label>
+                            <textarea class="input" id="sup-body" name="body" placeholder="What happened, what you expected, and what you’ve already tried." required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn--primary">Send request</button>
+                            <span class="form-hint">No account required.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <div class="footer-brand">
+                <a href="/index.html" class="brand-link">
+                    <img src="/assets/images/logo.png" alt="" class="logo" width="36" height="36">
+                    <span class="brand">Nexa<span class="accent">Core</span></span>
+                </a>
+                <p>We’re here when you need clear technical help.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Site</h4>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/order.html">Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="/products.html">Products</a></li>
+                    <li><a href="/portfolios.html">Portfolios</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="shell footer-bottom">
+            <p>&copy; 2026 NexaCore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cookie-consent" class="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+        <div class="cookie-banner__inner">
+            <p>We use a small browser preference to remember your cookie choice. Allow cookies for this site?</p>
+            <div class="cookie-banner__actions">
+                <button type="button" class="btn btn--primary" id="cookie-accept">Allow cookies</button>
+                <button type="button" class="btn btn--ghost" id="cookie-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

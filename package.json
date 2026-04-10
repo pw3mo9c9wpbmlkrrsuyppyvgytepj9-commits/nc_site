@@ -1,0 +1,12 @@
+{
+  "name": "nexacore-website",
+  "private": true,
+  "description": "Run the site + OAuth with: npm start (uses server/index.js)",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

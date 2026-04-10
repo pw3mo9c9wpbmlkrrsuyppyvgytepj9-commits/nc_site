@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 40px;
+        }
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+        .dashboard-header h1 {
+            font-size: 2.2rem;
+            color: #2d3748;
+            margin: 0;
+        }
+        .dashboard-header .status {
+            font-size: 1rem;
+            color: #38a169;
+            background: #e6fffa;
+            padding: 6px 18px;
+            border-radius: 20px;
+        }
+        .stats {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .stat-card {
+            flex: 1;
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .stat-card h2 {
+            margin: 0 0 8px 0;
+            font-size: 2rem;
+            color: #3182ce;
+        }
+        .stat-card p {
+            margin: 0;
+            color: #4a5568;
+        }
+        .bot-list {
+            margin-top: 24px;
+        }
+        .bot-list table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        .bot-list th, .bot-list td {
+            padding: 14px 10px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        .bot-list th {
+            background: #f1f5f9;
+            color: #2d3748;
+        }
+        .bot-list tr:last-child td {
+            border-bottom: none;
+        }
+        .bot-action {
+            color: #3182ce;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; min-height: 100vh;">
+        <aside style="width: 220px; background: #232946; color: #fff; display: flex; flex-direction: column; padding: 32px 0; box-shadow: 2px 0 16px rgba(0,0,0,0.04);">
+            <div style="font-size: 1.6rem; font-weight: bold; text-align: center; margin-bottom: 40px; letter-spacing: 1px;">NexaCore</div>
+            <nav style="flex: 1;">
+                <a href="#dashboard" style="display: block; padding: 16px 32px; color: #fff; text-decoration: none; font-size: 1.1rem; background: #2d3748; border-radius: 0 20px 20px 0; margin-bottom: 8px;">Dashboard</a>
+                <a href="#modules" style="display: block; padding: 16px 32px; color: #fff; text-decoration: none; font-size: 1.1rem; border-radius: 0 20px 20px 0; margin-bottom: 8px;">Modules</a>
+                <a href="#settings" style="display: block; padding: 16px 32px; color: #fff; text-decoration: none; font-size: 1.1rem; border-radius: 0 20px 20px 0;">Settings</a>
+            </nav>
+        </aside>
+        <main class="dashboard-container" style="flex: 1;">
+            <div class="dashboard-header">
+                <h1>Bot Dashboard</h1>
+                <span class="status">All Systems Operational</span>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <h2>12</h2>
+                    <p>Active Bots</p>
+                </div>
+                <div class="stat-card">
+                    <h2>98%</h2>
+                    <p>Uptime</p>
+                </div>
+                <div class="stat-card">
+                    <h2>1,245</h2>
+                    <p>Messages Today</p>
+                </div>
+            </div>
+            <div class="bot-list">
+                <h2 style="margin-bottom: 12px; color: #2d3748;">Your Bots</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Last Active</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SupportBot</td>
+                            <td><span style="color: #38a169;">Online</span></td>
+                            <td>2 min ago</td>
+                            <td><span class="bot-action">View</span></td>
+                        </tr>
+                        <tr>
+                            <td>OrderBot</td>
+                            <td><span style="color: #e53e3e;">Offline</span></td>
+                            <td>1 hour ago</td>
+                            <td><span class="bot-action">Restart</span></td>
+                        </tr>
+                        <tr>
+                            <td>PortfolioBot</td>
+                            <td><span style="color: #38a169;">Online</span></td>
+                            <td>Just now</td>
+                            <td><span class="bot-action">View</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="modules" style="margin-top: 48px;">
+                <h2 style="color: #2d3748; margin-bottom: 18px;">Bot Modules</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+                    <div style="flex: 1 1 220px; background: #f7fafc; border-radius: 10px; padding: 20px 24px; min-width: 220px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <div style="font-weight: 500; color: #232946;">Moderation</div>
+                            <div style="font-size: 0.95rem; color: #4a5568;">Auto-moderate chat and filter spam</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div style="flex: 1 1 220px; background: #f7fafc; border-radius: 10px; padding: 20px 24px; min-width: 220px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <div style="font-weight: 500; color: #232946;">Music</div>
+                            <div style="font-size: 0.95rem; color: #4a5568;">Play music in voice channels</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div style="flex: 1 1 220px; background: #f7fafc; border-radius: 10px; padding: 20px 24px; min-width: 220px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <div style="font-weight: 500; color: #232946;">Welcome</div>
+                            <div style="font-size: 0.95rem; color: #4a5568;">Send welcome messages to new users</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div style="flex: 1 1 220px; background: #f7fafc; border-radius: 10px; padding: 20px 24px; min-width: 220px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <div style="font-weight: 500; color: #232946;">Logging</div>
+                            <div style="font-size: 0.95rem; color: #4a5568;">Log server events and actions</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+    /* Toggle Switch Styles */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 46px;
+        height: 24px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #cbd5e1;
+        transition: .4s;
+        border-radius: 24px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .switch input:checked + .slider {
+        background-color: #3182ce;
+    }
+    .switch input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+    /* End Toggle Switch Styles */
+    </style>
