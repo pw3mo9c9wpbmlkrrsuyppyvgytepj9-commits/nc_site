@@ -1,11 +1,3 @@
-/**
- * Simple DB API client for Discord bots.
- *
- * Env vars expected in your bot:
- * - DB_API_BASE=https://your-domain.com/api/public-db
- * - DB_API_KEY=your-bot-key
- * - DB_CONTAINER=db1
- */
 
 class DbClient {
   constructor({

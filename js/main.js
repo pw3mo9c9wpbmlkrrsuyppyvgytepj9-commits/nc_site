@@ -2,6 +2,37 @@
   var COOKIE_KEY = "nexa_cookie_consent";
 
   document.addEventListener("DOMContentLoaded", function () {
+    var header = document.querySelector(".site-header");
+    var navToggle = document.querySelector(".nav-toggle");
+    var primaryNav = document.getElementById("primary-nav");
+    if (header && navToggle && primaryNav) {
+      function setNavOpen(open) {
+        header.classList.toggle("nav-open", open);
+        document.body.classList.toggle("nav-open", open);
+        navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+      navToggle.addEventListener("click", function () {
+        setNavOpen(!header.classList.contains("nav-open"));
+      });
+      primaryNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setNavOpen(false);
+        });
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && header.classList.contains("nav-open")) {
+          setNavOpen(false);
+          navToggle.focus();
+        }
+      });
+      window.addEventListener("resize", function () {
+        if (window.matchMedia("(min-width: 901px)").matches && header.classList.contains("nav-open")) {
+          setNavOpen(false);
+        }
+      });
+    }
+
     var banner = document.getElementById("cookie-consent");
     var accept = document.getElementById("cookie-accept");
     var decline = document.getElementById("cookie-decline");

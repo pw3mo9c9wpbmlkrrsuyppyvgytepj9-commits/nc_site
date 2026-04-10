@@ -1,0 +1,14 @@
+services:
+  nexacore-api:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: nexacore-api
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server/data:/app/data
+      - ./Database/data:/Database/data
